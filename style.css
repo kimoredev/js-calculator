@@ -1,0 +1,80 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.container {
+    display: grid;
+    width: 400px;
+    height: 600px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 100px 1.25fr 1fr 1fr 1fr 1.25fr;
+    grid-template-areas:
+        'result result result result'
+        'clear clear delete divide'
+        'seven eight nine multiply'
+        'four five six minus'
+        'one two three plus'
+        'zero zero zero equals';
+    border: 0px solid black;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.result { 
+    grid-area: result;
+    background: #000200;
+    color: #FFF;
+    font-size: 2rem;
+    text-align: right;
+    line-height: 300%;
+    padding-right: 10px;
+}
+
+.container button{
+    background: #CED8D0;
+    color: #000200;
+    font-size: 2rem;
+    border: 0px solid transparent;
+}
+
+.container button:hover{
+    background: #E2EAE3;
+}
+
+.container .red{
+    background: #CE853E;
+    color: #FFF;
+}
+
+.container .red:hover{
+    background: #D0A26D;
+}
+
+.button-clear{
+    grid-area: clear;
+
+}
+.button-delete{ grid-area: delete; }
+.button-divide{ grid-area: divide; }
+
+.button-7{ grid-area: seven; }
+.button-8{ grid-area: eight; }
+.button-9{ grid-area: nine; }
+.button-multiply{ grid-area: multiply; }
+
+.button-4{ grid-area: four; }
+.button-5{ grid-area: five; }
+.button-6{ grid-area: six; }
+.button-minus{ grid-area: minus; }
+
+.button-1{ grid-area: one; }
+.button-2{ grid-area: two; }
+.button-3{ grid-area: three; }
+.button-plus{ grid-area: plus; }
+
+.button-0{ grid-area: zero; }
+.button-equals{ grid-area: equals; }
